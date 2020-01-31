@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepitenet.Powershell.SenseHat", "Pepitenet.Powershell.SenseHat.csproj", "{D66B7310-03ED-4EF1-ACB8-7106ECDC8F67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D66B7310-03ED-4EF1-ACB8-7106ECDC8F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66B7310-03ED-4EF1-ACB8-7106ECDC8F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66B7310-03ED-4EF1-ACB8-7106ECDC8F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66B7310-03ED-4EF1-ACB8-7106ECDC8F67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FA2011F-0D63-4C53-B73B-83D16054FBE2}
+	EndGlobalSection
+EndGlobal
