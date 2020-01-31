@@ -2,17 +2,30 @@
 
 namespace Pepitenet.Powershell.SenseHat
 {
+    public static class RtimuSettings
+    {
+        public static Sense.RTIMU.RTIMUSettings Settings { get; set; }
+    }
+
+
+    [Cmdlet(VerbsCommon.Set, "SenseHat")]
+    public class SetSenseHat : Cmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            RtimuSettings.Settings = Sense.RTIMU.RTIMUSettings.CreateDefault();
+        }
+    }
+
     [Cmdlet(VerbsCommon.Get, "Humidity")]
     public class GetHumidity : Cmdlet
     {
         protected override void ProcessRecord()
         {
-            Sense.RTIMU.RTIMUSettings Settings = Sense.RTIMU.RTIMUSettings.CreateDefault();
-            Sense.RTIMU.RTHumidity Humidity = Settings.CreateHumidity();
+            Sense.RTIMU.RTHumidity Humidity = RtimuSettings.Settings.CreateHumidity();
             Sense.RTIMU.RTHumidityData Result = Humidity.Read();
 
             WriteObject(Result);
-
         }
     }
 
@@ -21,8 +34,7 @@ namespace Pepitenet.Powershell.SenseHat
     {
         protected override void ProcessRecord()
         {
-            Sense.RTIMU.RTIMUSettings Settings = Sense.RTIMU.RTIMUSettings.CreateDefault();
-            Sense.RTIMU.RTPressure Pressure = Settings.CreatePressure();
+            Sense.RTIMU.RTPressure Pressure = RtimuSettings.Settings.CreatePressure();
             Sense.RTIMU.RTPressureData Result = Pressure.Read();
 
             WriteObject(Result);
