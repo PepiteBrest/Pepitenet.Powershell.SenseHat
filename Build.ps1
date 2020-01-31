@@ -72,7 +72,7 @@ switch($action)
 
         doBuild $location
         
-        Copy-Item .\Pepitenet.Powershell.IoT.psd1 $OutputFolder
+        Copy-Item .\Pepitenet.Powershell.SenseHat.psd1 $OutputFolder
 
     }
     "build" {
@@ -86,7 +86,7 @@ switch($action)
 
         doBuildProject $location
         
-        Copy-Item .\Pepitenet.Powershell.IoT.psd1 $OutputFolder
+        Copy-Item .\Pepitenet.Powershell.SenseHat.psd1 $OutputFolder
 
     }
     "clean" {
@@ -102,8 +102,8 @@ switch($action)
     }
     default {
         Write-Host "Please select of of these options :" -ForegroundColor Cyan
-        Write-Host "- 'build' : Only build Pepitenet.Powershell.Iot" -ForegroundColor Cyan
-        Write-Host "- 'buildall' : Build Pepitenet.Powershell.Iot and all its dependencies" -ForegroundColor Cyan
+        Write-Host "- 'build' : Only build Pepitenet.Powershell.SenseHat" -ForegroundColor Cyan
+        Write-Host "- 'buildall' : Build Pepitenet.Powershell.SenseHat and all its dependencies" -ForegroundColor Cyan
         Write-Host "- 'clean'" -ForegroundColor Cyan
     }
 }
